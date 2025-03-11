@@ -1,0 +1,73 @@
+.inventory-userlist-container {
+    display: flex;
+  }
+  
+  .userlist-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .filter-container select, .filter-container input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .edit-icon, .delete-icon {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px gray;
+  }
+  
+  .modal-content input {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+  
+  .pagination .active {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
