@@ -71,7 +71,8 @@ const MenuInventory = () => {
         </div>
 
         {/* Hide Welcome Message if on Dashboard */}
-        {location.pathname !== "/inventory-dashboard" && (
+        {!(location.pathname === "/inventory-dashboard" || location.pathname === "/inventory-userlist") && (
+
           <div className="menu-main-content">
             <h2>Welcome!</h2>
             <p>Please select a page to navigate through the system.</p>

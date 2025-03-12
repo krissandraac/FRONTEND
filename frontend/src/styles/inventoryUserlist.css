@@ -1,73 +1,155 @@
-.inventory-userlist-container {
-    display: flex;
-  }
-  
-  .userlist-content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .filter-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  
-  .filter-container select, .filter-container input {
-    padding: 5px;
-    margin-right: 10px;
-  }
-  
-  table {
+/* General Layout */
+.inventory-wrapper {
+  display: flex;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Content Wrapper */
+.inventory-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease-in-out;
+  overflow-x: auto;
+}
+
+/* User List Container */
+.inventory-userlist-wrapper {
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 8%;
+  background-color: #f4f4f4;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+/* Filter container */
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px; /* Adjust spacing between filters */
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Ensure proper spacing between label text and inputs */
+.filter-container label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Adjust input and select elements */
+.filter-container select,
+.filter-container input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  min-width: 150px; /* Ensures uniform width */
+}
+
+/* Ensuring search input has a good width */
+.filter-container input[type="text"] {
+  width: 370px;
+  margin-left: 17%;
+}
+
+/* Table Container */
+.table-container {
+  background: white;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* User Table */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px;
+  text-align: center;
+  border: none;
+}
+
+.table-container th {
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+}
+
+/* Action buttons */
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.edit-icon {
+  color: #ff9800;
+}
+
+.delete-icon {
+  color: #f44336;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  margin: 0 3px;
+  border: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background: #eee;
+}
+
+.pagination .active {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .inventory-content {
     width: 100%;
-    border-collapse: collapse;
   }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
+
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  
-  th {
-    background-color: #d32f2f;
-    color: white;
-  }
-  
-  .edit-icon, .delete-icon {
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px gray;
-  }
-  
-  .modal-content input {
-    display: block;
-    margin: 10px 0;
-    padding: 5px;
-  }
-  
+
   .pagination {
-    display: flex;
     justify-content: center;
-    margin-top: 20px;
   }
-  
-  .pagination button {
-    margin: 0 5px;
-    padding: 5px 10px;
-  }
-  
-  .pagination .active {
-    background-color: #d32f2f;
-    color: white;
-  }
-  
+}
